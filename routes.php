@@ -10,6 +10,10 @@ get('/', 'pages/userLogin.php');
 
 get('/register', 'pages/userRegister.php');
 
+get('/dashboard', 'pages/userDashboard.php');
+
+get('/logout', 'includes/userLogout.inc.php');
+
 post('/login', 'includes/userLogin.inc.php');
 
 // ERROR ROUTES

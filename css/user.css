@@ -54,7 +54,8 @@ body {
 }
 
 .login-form button {
-    height: 1.7rem;
+    height: 2.3rem;
+    font-weight: bold;
 }
 
 .login-form h4 {

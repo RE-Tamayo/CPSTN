@@ -1,3 +1,11 @@
+<?php
+    if(!isset($_SESSION))session_start();
+    if(!isset($_SESSION['user_id'])){
+        header('Location: /?error=Log-In first.');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +16,7 @@
     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/cdn.inc.php'  ?>
 </head>
 <body>
-    <h1>USER REGISTER</h1>
-    <a href="/">ALREADY HAVE AN ACCOUNT?</a>
+    <h1>USER DASHBOARD</h1>
+    <a href="/logout">LOGOUT</a>
 </body>
 </html>
