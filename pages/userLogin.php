@@ -13,6 +13,7 @@
         <div class="form-container">
             <form action="/login" method="POST" class="login-form">
                 <h4>USER LOGIN</h4>
+                <span><?= $_GET['error'] ?></span>
                 <input type="text" name="username" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
                 <button class="btn btn-primary">Log-In</button>

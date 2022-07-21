@@ -22,6 +22,13 @@ class UserLogin extends Database {
             if(!isset($_SESSION))session_start();
             $_SESSION['user_id'] = $dbPassword[0]['id'];
         }
+        else {
+            $stmt = null;
+            header('Location: /?error=Wrong password.');
+            exit();
+        }
+
+        $stmt = null;
     }
 
 }
