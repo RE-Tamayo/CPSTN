@@ -9,7 +9,7 @@ class Database {
 
     private  $connect = null;
 
-    protected function __construct() {
+    private function __construct() {
         die('Init function is not allowed');
     }
 

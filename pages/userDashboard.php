@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEUST CLINIC</title>
-    <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/cdn.inc.php'  ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
 </head>
 <body>
     <h1>USER DASHBOARD</h1>
