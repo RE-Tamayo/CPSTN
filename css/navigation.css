@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 :root {
     font-size: 16px;
-    --white: #ffffff;
-    --light: #f7f7f7;
-    --dark-gray: #2d2d2d;
+    font-family: 'Open Sans', sans-serif;
+    --light: #ffffff;
     --dark: #181813;
+    --light-gray: #777777;
+    --dark-gray: #2d2d2d;
+    --primary: #0275d8;
+    --danger: #d9534f;
+    --success:#5cb85c;
+    --off-white: #f7f7f7;
 }
 
 * {
@@ -13,5 +20,122 @@
 }
 
 body {
+    color: var(--dark);
     background-color: var(--light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+body::-webkit-scrollbar {
+    width: 0.35rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+main {
+    margin-left: 5rem;
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--dark);
+    padding: 0;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:hover,
+.nav-item:hover .nav-link i,
+.nav-item:hover .link-text{
+    background-color: var(--dark-gray);
+    color: var(--light);
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    color: var(--light);
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+    margin: 0 1.7rem;
+    color: var(--light-gray);
+}
+
+.link-text {
+    display: none;
+    color: var(--light-gray);
+}
+
+/*Small screens*/
+@media only screen and (max-width: 600px) {
+    main {
+        margin-left: 0;
+        margin-bottom: 5rem;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        height: 5rem;
+        width: 100vw;
+        overflow-x: scroll;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+}
+
+/*Large screens*/
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+        transition: width 200ms ease;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+    }
+
+    .navbar-nav {
+        height: 100vh;
+        width: 100%;
+    }
 }

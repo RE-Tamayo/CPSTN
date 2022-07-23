@@ -8,23 +8,26 @@ class UserLogin extends Database {
         //Validate if query success
         if(!$stmt->execute(array($username))) {
             $stmt = null;
-            header('Location: /?error=There was an error logging you in.');
+            header('Location: /?login=There was an error logging you in.');
             exit();
         }
+        //Check if query is not empty
         if($stmt->rowCount() == 0) {
             $stmt = null;
-            header('Location: /?error=User does not exist.');
+            header('Location: /?login=Wrong username or password.');
             exit();
         }
         $dbPassword = $stmt->fetchAll(PDO::FETCH_ASSOC);
         //Check if password matches
+        //If correct set session variable then redirect to dashboard
+        //Else redirect to login
         if($password == $dbPassword[0]['pwd']) {
             if(!isset($_SESSION))session_start();
             $_SESSION['user_id'] = $dbPassword[0]['id'];
         }
         else {
             $stmt = null;
-            header('Location: /?error=Wrong password.');
+            header('Location: /?login=Wrong username or password.');
             exit();
         }
 

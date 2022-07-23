@@ -3,6 +3,7 @@
 require_once("{$_SERVER['DOCUMENT_ROOT']}/router.php");
 
 //ADMIN ROUTES
+get('/admin', 'pages/adminLogin.php');
 
 
 //USER ROUTES

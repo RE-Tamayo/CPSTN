@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +16,12 @@
     <title>NEUST CLINIC</title>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
 </head>
+
 <body>
-    <h1>USER DASHBOARD</h1>
-    <a href="/logout">LOGOUT</a>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/userNav.inc.php'); ?>
+    <main><!--MAIN TAG REQUIRED FOR NAV SPACING-->
+    
+    </main>
 </body>
+
 </html>

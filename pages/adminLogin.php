@@ -23,6 +23,7 @@
         <div class="form-container">
             <img src="../assets/img/neust-logo.png" alt="neust-logo" class="center-x gap-tb">
             <h4 class="center-x gap-tb">NEUST CLINIC</h4>
+            <h4 class="center-x gap-tb">(ADMIN)</h4>
             <span class="center-x gap-tb error"><?php if(isset($_GET['login'])) { echo $validError; } ?></span>
             <form action="/login" method="POST" class="login-form">
                 <div class="input-group">
@@ -38,9 +39,8 @@
                     <label>Password</label>
                     <i class="toggle fa-solid fa-eye" id="toggle-pwd"></i>
                 </div>
-                <a href="#" class="link">Forgot Password?</a>
-                <button>Log-In</button>
-                <span class="center-x">Not registered?<a href="/register" class="link"> Register here</a></span>
+                <button class="gap-tb">Log-In</button>
+                <span class="center-x">NEUST Student?<a href="/register" class="link"> Click here</a></span>
             </form>
         </div>
     </div>
