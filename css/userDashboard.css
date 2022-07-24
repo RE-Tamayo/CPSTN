@@ -32,7 +32,3 @@ section {
     padding: 1rem;
 }
 
-section:nth-child(even) {
-    background-color: #2d2d2d;
-    color: var(--light);
-}
