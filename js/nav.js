@@ -18,3 +18,16 @@ nav.forEach(item => {
        
     });
 });
+
+
+const menu = document.querySelector("#menu");
+
+const pushbar =   new Pushbar({
+    blur:true,
+    overlay:true,
+});
+
+menu.addEventListener("click", (event) => {
+    pushbar.open('topnav');	
+});
+	
