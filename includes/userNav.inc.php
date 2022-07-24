@@ -1,12 +1,17 @@
 <div class="topnav" data-pushbar-id="topnav" data-pushbar-direction="top">
       <a data-pushbar-close><i class="fa-solid fa-xmark topbar-x"></i></a>
       <ul>
+        <li class="sm-screen">
+            <a href="#home">
+                <span>Home</span>
+            </a>
+        </li>
         <li>
             <a href="#user-information">
                 <span>User Information</span>
             </a>
         </li>
-        <li class="sm-screen">
+        <li>
             <a href="#visit-records">
                 <span>Visit Records</span>
             </a>
@@ -21,21 +26,26 @@
                 <span>Notifications</span>
             </a>
         </li>
+        <li class="sm-screen">
+            <a href="#settings">
+                <span>Settings</span>
+            </a>
+        </li>
       </ul>
 </div>
 
 <nav class="navbar">
-    <ul class="navbar-nav">
-        <li class="nav-item mobile">
-            <a class="nav-link" id="menu">
-                <i class="fa-solid fa-bars"></i>
-                <span class="link-text">Menu</span>
-            </a>
-        </li>
+    <ul class="navbar-nav"> 
         <li class="nav-item  active">
             <a href="#home" class="nav-link">
                 <i class="fa-solid fa-house-user"></i>
                 <span class="link-text">Home</span>
+            </a>
+        </li>
+        <li class="nav-item mobile">
+            <a class="nav-link" id="menu">
+                <i class="fa-solid fa-bars"></i>
+                <span class="link-text">Menu</span>
             </a>
         </li>
         <li class="nav-item">

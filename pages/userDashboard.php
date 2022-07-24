@@ -23,22 +23,26 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/userNav.inc.php'); ?>
     <main><!--MAIN TAG REQUIRED FOR NAV SPACING-->
         <section id="home">
-            <h1>1</h1>
+            <span><h1>Home</h1></span>
+            <div class="card bg-white shadow overflow-auto">
+                <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, incidunt quisquam voluptatum quod itaque ab animi facere placeat. Voluptate quibusdam harum tempora numquam modi qui quos, repudiandae aperiam voluptatibus debitis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tempore, autem necessitatibus dolorem esse dolores quisquam non commodi quod tenetur saepe, perspiciatis nihil magnam! Nostrum id quae natus ea aspernatur.</p>
+            </div>
         </section>
         <section id="user-information">
-            <h1>2</h1>
+            <span><h1>User Information</h1></span>
         </section>
         <section id="visit-records">
-            <h1>3</h1>
+            <span><h1>Visit Records</h1></span>
         </section>
         <section id="schedule-visit">
-            <h1>4</h1>
+            <span><h1>Schedule Visit</h1></span>
         </section>
         <section id="notifications">
-            <h1>5</h1>
+            <span><h1>Notifications</h1></span>
         </section>
         <section id="settings">
-            <h1>6</h1>
+            <span><h1>Settings</h1></span>
         </section>
     </main>
 </body>
