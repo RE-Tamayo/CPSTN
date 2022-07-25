@@ -43,6 +43,7 @@
         </section>
         <section id="settings">
             <span><h1>Settings</h1></span>
+            <a href="/logout">logout</a>
         </section>
     </main>
 </body>
