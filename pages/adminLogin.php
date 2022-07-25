@@ -25,7 +25,7 @@
             <h4 class="center-x gap-tb">NEUST CLINIC</h4>
             <h4 class="center-x gap-tb">(ADMIN)</h4>
             <span class="center-x gap-tb error"><?php if(isset($_GET['login'])) { echo $validError; } ?></span>
-            <form action="/login" method="POST" class="login-form">
+            <form action="/admin/login" method="POST" class="login-form">
                 <div class="input-group">
                     <input type="text" name="username" required>
                     <span class="highlight"></span>
