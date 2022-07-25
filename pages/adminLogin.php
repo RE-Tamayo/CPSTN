@@ -40,7 +40,7 @@
                     <i class="toggle fa-solid fa-eye" id="toggle-pwd"></i>
                 </div>
                 <button class="gap-tb">Log-In</button>
-                <span class="center-x">NEUST Student?<a href="/register" class="link"> Click here</a></span>
+                <span class="center-x">NEUST Student?<a href="/" class="link"> Click here</a></span>
             </form>
         </div>
     </div>
