@@ -11,10 +11,26 @@ class UserLoginContr extends UserLogin {
     }
 
     public function login() {
-        $this->loginUser($this->username, $this->password);
+        if($this->emptyInput() == false) {
+            header("Location: /admin?error=Empty input");
+            exit();
+        }
+
+        $this->loginUser($this->username, $this->password); 
     }
 
+    //Check if input is empty
+    private function emptyInput() {
+        $result = false;
+        if(empty($this->username) || empty($this->password)) {
+                $result = false;
+        }
+        else {
+            $result = true;
+        }
 
+        return $result;
+    }
     
 
     
