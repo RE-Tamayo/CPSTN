@@ -12,6 +12,16 @@
 <body>
     <h1 class="text-lg">USER REGISTER</h1>
     <a href="/">ALREADY HAVE AN ACCOUNT?</a>
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="text" name="fName" placeholder="First Name">
+        <input type="text" name="mName" placeholder="Middle Name">
+        <input type="text"name="lName" placeholder="Last Name">
+        <input type="text"name="gender" placeholder="Gender">
+        <input type="date" name="dob">
+        <button type="submit" name="submit">Submit</button>
+    </form>
 </body>
 
 </html>

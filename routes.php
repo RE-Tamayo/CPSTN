@@ -22,5 +22,7 @@ get('/logout', 'includes/userLogout.inc.php');
 
 post('/login', 'includes/userLogin.inc.php');
 
+post('/register', 'includes/userRegister.inc.php');
+
 // ERROR ROUTES
 any('/404','pages/404.php');

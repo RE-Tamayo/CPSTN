@@ -12,7 +12,7 @@ class UserLoginContr extends UserLogin {
 
     public function login() {
         if($this->emptyInput() == false) {
-            header("Location: /admin?error=Empty input");
+            header("Location: /?error=Empty input");
             exit();
         }
 
