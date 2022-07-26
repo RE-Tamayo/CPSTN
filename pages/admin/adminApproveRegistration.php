@@ -27,14 +27,22 @@
                 <h1>APPROVE</h1>
             </span>
             <div class="card bg-white shadow overflow-auto">
-                <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, incidunt quisquam
-                    voluptatum quod itaque ab animi facere placeat. Voluptate quibusdam harum tempora numquam modi qui
-                    quos, repudiandae aperiam voluptatibus debitis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tempore, autem necessitatibus dolorem
-                    esse dolores quisquam non commodi quod tenetur saepe, perspiciatis nihil magnam! Nostrum id quae
-                    natus ea aspernatur.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <a href="/admin/logout">logout</a>
         </section>
     </main>
 </body>
