@@ -34,7 +34,6 @@
                     esse dolores quisquam non commodi quod tenetur saepe, perspiciatis nihil magnam! Nostrum id quae
                     natus ea aspernatur.</p>
             </div>
-            <a href="/admin/logout">logout</a>
         </section>
     </main>
 </body>

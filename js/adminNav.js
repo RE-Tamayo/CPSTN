@@ -7,9 +7,10 @@ currentPage = pages[page];
 const navItem1 = document.querySelector('#dashboard');
 const navItem2 = document.querySelector('#approve');
 const navItem3 = document.querySelector('#analytics');
-const navItem4 = document.querySelector('#schedule');
-const navItem5 = document.querySelector('#notifications');
-const navItem6 = document.querySelector('#settings');
+const navItem4 = document.querySelector('#users');
+const navItem5 = document.querySelector('#schedule');
+const navItem6 = document.querySelector('#notifications');
+const navItem7 = document.querySelector('#settings');
 
 switch (currentPage) {
     case "dashboard":
@@ -27,19 +28,24 @@ switch (currentPage) {
             navItem3.classList.add('active');
         }
         break;
-    case "schedule":
+    case "users":
         if (!navItem4.classList.contains('active')) {
             navItem4.classList.add('active');
         }
         break;
-    case "notifications":
+    case "schedule":
         if (!navItem5.classList.contains('active')) {
             navItem5.classList.add('active');
         }
         break;
-    case "settings":
+    case "notifications":
         if (!navItem6.classList.contains('active')) {
             navItem6.classList.add('active');
+        }
+        break;
+    case "settings":
+        if (!navItem7.classList.contains('active')) {
+            navItem7.classList.add('active');
         }
         break;
     default:

@@ -13,7 +13,7 @@ get('/admin/approve', 'pages/admin/adminApproveRegistration.php');
 
 get('/admin/analytics', 'pages/admin/adminAnalytics.php');
 
-get('/admin/users', 'pages/admin/adminManage.php');
+get('/admin/users', 'pages/admin/adminManageUsers.php');
 
 get('/admin/schedule', 'pages/admin/adminVisitSchedule.php');
 
