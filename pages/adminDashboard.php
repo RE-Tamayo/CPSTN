@@ -10,18 +10,16 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>NEUST CLINIC</title>
-     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
-     <link rel="stylesheet" href="../css/userDashboard.css">
+    <title>NEUST CLINIC</title>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
+    <link rel="stylesheet" href="../css/adminDashboard.css">
     <script defer src="../js/nav.js"></script>
-   
 </head>
 
 <body>
-      <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/userNav.inc.php'); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/adminNav.inc.php'); ?>
     <main>
         <!--MAIN TAG REQUIRED FOR NAV SPACING-->
         <section id="home">
@@ -61,10 +59,10 @@
             <span>
                 <h1>Settings</h1>
             </span>
-            
+
             <a href="/admin/logout">logout</a>
         </section>
-
+    </main>
 </body>
 
 </html>
