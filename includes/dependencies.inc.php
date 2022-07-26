@@ -12,6 +12,3 @@
 <!--PUSHBAR JS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
-
-<!--NAVIGATION STYLES-->
-<link rel="stylesheet" href="../css/navigation.css">

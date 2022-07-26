@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../css/navigation.css">
+
 <div class="topnav" data-pushbar-id="topnav" data-pushbar-direction="top">
       <a data-pushbar-close><i class="fa-solid fa-xmark topbar-x"></i></a>
       <ul>

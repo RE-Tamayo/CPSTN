@@ -15,7 +15,7 @@
     <title>NEUST CLINIC</title>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
     <link rel="stylesheet" href="../css/adminDashboard.css">
-    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/adminNav.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <!--MAIN TAG REQUIRED FOR NAV SPACING-->
         <section id="home">
             <span>
-                <h1>Home</h1>
+                <h1>NOTIFICATIONS</h1>
             </span>
             <div class="card bg-white shadow overflow-auto">
                 <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, incidunt quisquam
@@ -34,32 +34,6 @@
                     esse dolores quisquam non commodi quod tenetur saepe, perspiciatis nihil magnam! Nostrum id quae
                     natus ea aspernatur.</p>
             </div>
-        </section>
-        <section id="user-information">
-            <span>
-                <h1>User Information</h1>
-            </span>
-        </section>
-        <section id="visit-records">
-            <span>
-                <h1>Visit Records</h1>
-            </span>
-        </section>
-        <section id="schedule-visit">
-            <span>
-                <h1>Schedule Visit</h1>
-            </span>
-        </section>
-        <section id="notifications">
-            <span>
-                <h1>Notifications</h1>
-            </span>
-        </section>
-        <section id="settings">
-            <span>
-                <h1>Settings</h1>
-            </span>
-
             <a href="/admin/logout">logout</a>
         </section>
     </main>
