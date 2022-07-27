@@ -37,11 +37,50 @@ class AdminModel extends Database {
 
     //GET ALL USER REGISTRATION
     protected function getAllRegistration() {
+        //SET QUERY AND PREPARE STATEMENT
+        $stmt = $this->connect()->prepare('SELECT * FROM registration');
+        //VALIDATE AND EXECUTE QUERY
+        if(!$stmt->execute()) {
+            $stmt = null;
+            header('Location: /admin?status=There was an error while retrieving registrations.');
+            exit();
+        }
+        //CHECK IF EMPTY
+        if($stmt->rowCount() == 0) {
+            $stmt = null;
+            header('Location: /admin?status=No registration found.');
+            exit();
+        }
+        //ASSIGN RESULT TO DATA
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = null;
 
+        //RETURN DATA
+        return $data;
     }
 
     //GET SINGLE REGISTRATION
-    function getRegistration() {
+    function getRegistration($id) {
+        //SET QUERY AND PREPARE STATEMENT
+        $stmt = $this->connect()->prepare('SELECT * FROM registration WHERE id = ? LIMIT 1;');
+        //VALIDATE AND EXECUTE QUERY
+        if(!$stmt->execute()) {
+            $stmt = null;
+            header('Location: /admin?status=There was an error while retrieving registration.');
+            exit();
+        }
+        //CHECK IF EMPTY
+        if($stmt->rowCount() == 0) {
+            $stmt = null;
+            header('Location: /admin?status=No registration found.');
+            exit();
+        }
+        //ASSIGN RESULT TO DATA
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = null;
+        
+        //RETURN DATA
+        return $data;
 
     }
 
