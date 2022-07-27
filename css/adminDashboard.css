@@ -23,12 +23,97 @@ body {
     background-color: var(--off-white);
 }
 
-section {
+main {
+    margin-left: 5rem;
     height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     padding: 1rem;
+}
+
+.dash-nav {
+    background-color: #f1e8e8;
+}
+
+.cs-1 {
+    grid-column: span 1;
+}
+
+.cs-2 {
+    grid-column: span 2;
+}
+
+.cs-3 {
+    grid-column: span 3;
+}
+
+.cs-4 {
+    grid-column: span 4;
+}
+
+.cs-5 {
+    grid-column: span 5;
+}
+
+.cs-6 {
+    grid-column: span 6;
+}
+
+.cs-7 {
+    grid-column: span 7;
+}
+
+.cs-8 {
+    grid-column: span 8;
+}
+
+.cs-9 {
+    grid-column: span 9;
+}
+
+.cs-10 {
+    grid-column: span 10;
+}
+
+.cs-11 {
+    grid-column: span 11;
+}
+
+.cs-12 {
+    grid-column: span 12;
+}
+
+.rs-1 {
+    grid-row: span 1;
+}
+
+.rs-2 {
+    grid-row: span 2;
+}
+
+.rs-3 {
+    grid-row: span 3;
+}
+
+.rs-4{
+    grid-row: span 4;
+}
+
+.rs-5 {
+    grid-row: span 5;
+}
+
+.rs-6 {
+    grid-row: span 6;
+}
+
+.rs-7 {
+    grid-row: span 7;
+}
+
+.rs-8 {
+    grid-row: span 8;
 }
 

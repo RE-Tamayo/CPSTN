@@ -4,6 +4,7 @@
         header('Location: /admin?login=Session expired.');
         exit();
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -16,34 +17,19 @@
     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
     <link rel="stylesheet" href="../css/adminDashboard.css">
     <script defer src="../js/adminNav.js"></script>
+    <script defer src="../js/adminApprove.js"></script>
 </head>
 
 <body>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/adminNav.inc.php'); ?>
     <main>
         <!--MAIN TAG REQUIRED FOR NAV SPACING-->
-        <section id="home">
-            <span>
-                <h1>APPROVE</h1>
-            </span>
-            <div class="card bg-white shadow overflow-auto">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Username</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="card shadow mb-3 cs-12 rs-1 p-2"><span class="my-auto d-flex justify-content-between"><h5 class="my-auto">Approve Users</h5><span class="d-flex flex-column"><h6><?php if(isset($_SESSION['admin_username']))  {echo $_SESSION['admin_username'];}  ?></h6><h6>Administrator</h6></span></span></div>
+        <div class="card shadow bg-light cs-12 rs-7">
+            <span class="card-header d-flex justify-content-between"><h4>Registration</h4><button class="btn btn-primary text-light font-weight-bold" id="refresh"><i class="fa-solid fa-rotate-right mr-2"></i>Refresh</button></span>
+            <div class="card-body" id="registration">
             </div>
-        </section>
+        </div>
     </main>
 </body>
 

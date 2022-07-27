@@ -25,6 +25,7 @@ class AdminModel extends Database {
         if($password == $dbPassword[0]['pwd']) {
             if(!isset($_SESSION))session_start();
             $_SESSION['admin_id'] = $dbPassword[0]['id'];
+            $_SESSION['admin_username'] = $dbPassword[0]['uname'];
         }
         else {
             $stmt = null;
