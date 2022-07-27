@@ -11,6 +11,8 @@ get('/admin/dashboard', 'pages/admin/adminDashboard.php');
 
 get('/admin/approve', 'pages/admin/adminApproveRegistration.php');
 
+get('/gagoamputa', 'includes/adminApproveTable.inc.php');
+
 get('/admin/analytics', 'pages/admin/adminAnalytics.php');
 
 get('/admin/users', 'pages/admin/adminManageUsers.php');

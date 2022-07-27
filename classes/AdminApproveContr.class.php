@@ -1,7 +1,7 @@
 <?php
 
 
-class AdminApproveControl extends AdminModel {
+class AdminApproveContr extends AdminModel {
 
     public function __construct() {
         return true;
