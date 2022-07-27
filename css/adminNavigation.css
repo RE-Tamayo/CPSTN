@@ -169,8 +169,12 @@ text-align: left;
         margin-top: 0;
     }
 
-    #refresh i {
+    #refresh-text {
         display: none;
+    }
+
+    #refresh-icon {
+        margin: 0;
     }
 
 }
@@ -211,8 +215,12 @@ text-align: left;
         display: none;
     }
 
-    #refresh i {
+    #refresh-text {
         display: none;
+    }
+
+    #refresh-icon {
+        margin: 0;
     }
 }
 
