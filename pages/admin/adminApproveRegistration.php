@@ -16,17 +16,32 @@
     <?php include $_SERVER['DOCUMENT_ROOT'].'/includes/dependencies.inc.php'  ?>
     <link rel="stylesheet" href="../css/adminDashboard.css">
     <script defer src="../js/adminNav.js"></script>
-    <script defer src="../js/adminApprove.js"></script>
 </head>
 
 <body>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/adminNav.inc.php'); ?>
     <main>
         <!--MAIN TAG REQUIRED FOR NAV SPACING-->
-        <section>
-            <div class="card bg-white shadow colspan-12">
-                <span class="d-flex justify-content-between card-header"><h4>Registrations</h4><button id="btn">Refresh</button></span>
-                <div class="card-body" id="registrationTable"></div>
+        <section id="home">
+            <span>
+                <h1>APPROVE</h1>
+            </span>
+            <div class="card bg-white shadow overflow-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>

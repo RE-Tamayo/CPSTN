@@ -21,8 +21,6 @@
 
 body {
     background-color: var(--off-white);
-    padding: 0;
-    margin: 0;
 }
 
 section {
@@ -33,6 +31,4 @@ section {
     align-items: center;
     padding: 1rem;
 }
-
-
 
