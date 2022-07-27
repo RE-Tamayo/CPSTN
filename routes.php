@@ -11,7 +11,7 @@ get('/admin/dashboard', 'pages/admin/adminDashboard.php');
 
 get('/admin/approve', 'pages/admin/adminApproveRegistration.php');
 
-get('/registration-table', 'includes/adminApproveTable.inc.php');
+get('/regTable', 'includes/adminApproveTable.inc.php');
 
 get('/admin/analytics', 'pages/admin/adminAnalytics.php');
 
