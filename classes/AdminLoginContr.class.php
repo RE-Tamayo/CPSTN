@@ -1,6 +1,6 @@
 <?php
 
-class AdminLoginContr extends AdminLogin {
+class AdminLoginContr extends AdminModel {
 
     private $username;
     private $password;
@@ -17,7 +17,7 @@ class AdminLoginContr extends AdminLogin {
             exit();
         }
         
-        $this->loginAdmin($this->username, $this->password);
+        $this->adminLogin($this->username, $this->password);
     }
 
     //Check if input is empty

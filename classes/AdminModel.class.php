@@ -1,8 +1,9 @@
 <?php
 
-class AdminLogin extends Database {
-    
-    protected function loginAdmin ($username, $password) {
+class AdminModel extends Database {
+
+    //LOGIN ADMIN
+    protected function adminLogin($username, $password) {
         //Check if user exists
         $stmt = $this->connect()->prepare('SELECT * FROM admin WHERE uname = ?');
         //Validate if query success
@@ -32,6 +33,16 @@ class AdminLogin extends Database {
         }
 
         $stmt = null;
+    }
+
+    //GET ALL USER REGISTRATION
+    protected function getAllRegistration() {
+
+    }
+
+    //GET SINGLE REGISTRATION
+    function getRegistration() {
+
     }
 
 }

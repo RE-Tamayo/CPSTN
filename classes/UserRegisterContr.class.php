@@ -1,7 +1,7 @@
 <?php
 
 
-class UserRegisterContr extends UserRegister {
+class UserRegisterContr extends UserModel {
 
     private $username;
     private $password;

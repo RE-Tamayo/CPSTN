@@ -1,6 +1,6 @@
 <?php
 
-class UserLoginContr extends UserLogin {
+class UserLoginContr extends UserModel {
 
     private $username;
     private $password;
@@ -16,7 +16,7 @@ class UserLoginContr extends UserLogin {
             exit();
         }
 
-        $this->loginUser($this->username, $this->password); 
+        $this->userLogin($this->username, $this->password); 
     }
 
     //Check if input is empty

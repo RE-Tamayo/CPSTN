@@ -1,8 +1,24 @@
 <?php
 
-class UserLogin extends Database {
+class UserModel extends Database {
     
-    protected function loginUser($username, $password) {
+    //REGISTER USER
+    function userRegister($username, $password, $fName, $mName, $lName, $gender, $dob, $age) {
+        $stmt =  $this->connect()->prepare("INSERT INTO registration (uname, pwd, fname, mName, lName, gender, dob, age)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?); ");
+
+        //Validate if query success
+        if(!$stmt->execute(array($username, $password, $fName, $mName, $lName, $gender, $dob, $age))) {
+            $stmt = null;
+            header('Location: /Register?login=There was an error during registration.');
+            exit();
+        }
+
+        $stmt = null;
+    }
+
+    //LOGIN USER
+    protected function userLogin($username, $password) {
         //Check if user exists
         $stmt = $this->connect()->prepare('SELECT * FROM users WHERE uname = ?');
         //Validate if query success
@@ -33,5 +49,7 @@ class UserLogin extends Database {
 
         $stmt = null;
     }
+
+
 
 }
