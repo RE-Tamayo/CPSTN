@@ -1,11 +1,17 @@
 <?php
+    if(!isset($_SESSION))session_start();
+    if(!isset($_SESSION['admin_id'])){
+        header('Location: /admin?login=Session expired.');
+        exit();
+    }
+
     require_once($_SERVER['DOCUMENT_ROOT'].'/autoloader.php');
 
     $registration = new AdminApproveContr();
     $data = $registration->getAllReg();
 ?>
 
-    <table class="w-100" id="table">
+    <table id="table" class="table table-striped w-100">
         <thead>
             <tr>
                 <th>Username</th>
@@ -16,17 +22,20 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-                foreach($data as $item) {
-                    echo '<tr>';
-                        echo '<td>'.$item['uname'].'</td>';
-                        echo '<td>'.$item['fName'].' '.$item['lName'].'</td>';
-                        echo '<td>'.$item['age'].'</td>';
-                        echo '<td>'.$item['gender'].'</td>';
-                        echo '<td>'.'<a href=?"'.$item['id'].'>View</a>'.' '.'<a href=?"'.$item['id'].'>Approve</a>'.' '.'<a href=?"'.$item['id'].'>Disapprove</a>'.'</td>';
-                    echo '</tr>';
-                }
-            ?>
+            <?php foreach($data as $item) { ?>
+                
+                <tr>
+                    <td><?php echo $item["uname"]; ?></td>
+                    <td><?php echo $item["fName"]; ?></td>
+                    <td><?php echo $item["age"]; ?></td>
+                    <td><?php echo $item["gender"]; ?></td>
+                    <td>    
+                    <?php echo '<a class="btn btn-outline-primary" href="#?id='.$item['id'].'">View</a>'; ?>
+                    <?php echo '<a class="btn btn-outline-success" href="#?id='.$item['id'].'">Edit</a>'; ?>
+                    <?php echo '<a class="btn btn-outline-warning" href="#?id='.$item['id'].'">Delete</a>'; ?>
+                    </td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 

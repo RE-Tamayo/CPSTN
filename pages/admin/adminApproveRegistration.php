@@ -23,12 +23,10 @@
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/adminNav.inc.php'); ?>
     <main>
         <!--MAIN TAG REQUIRED FOR NAV SPACING-->
-        <section>
-            <div class="card bg-white shadow colspan-12">
-                <span class="d-flex justify-content-between card-header"><h4>Registrations</h4><button id="btn">Refresh</button></span>
-                <div class="card-body" id="registrationTable"></div>
-            </div>
-        </section>
+        <div class="card bg-white shadow colspan-12">
+            <span class="d-flex justify-content-between card-header"><h4>Registrations</h4><button id="btn">Refresh</button></span>
+            <div class="card-body" id="registrationTable"></div>
+        </div>
     </main>
 </body>
 
