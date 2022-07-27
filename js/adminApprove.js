@@ -1,8 +1,8 @@
 $(document).ready(
     function() {
-        $("#registrationTable").load("/registration-table");
+        $("#registrationTable").load("/gagoamputa");
         $("#btn").click(function() {
-            $("#registrationTable").load("/registration-table");
+            $("#registrationTable").load("/gagoamputa");
         });
     }
 );
