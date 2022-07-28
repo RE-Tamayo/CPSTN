@@ -4,6 +4,9 @@
         header('Location: /admin?login=Session expired.');
         exit();
     }
+    if(isset($_SESSION['admin_username'])) {
+        $username = ucfirst($_SESSION['admin_username']);
+   }
 ?>
 
 <!DOCTYPE html>
@@ -32,28 +35,25 @@
                     <div class="input-group-prepend" id="dropdown-logo">
                         <span class="input-group-text  bg-primary text-light" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
                     </div>
-                    <select class="form-select">
-                        <option selected><?php if(isset($_SESSION['admin_username'])) { echo $_SESSION['admin_username']; } ?></option>
-                        <option>Settings</option>
-                        <option>Log-out</option>
+                    <select class="form-select" onChange="window.location.href=this.value">
+                        <option selected><?php echo $username; ?></option>
+                        <option value="/admin/settings">Settings</a></option>
+                        <option value="/admin/logout">Log-out</option>
                     </select>
                 </div>
             </div>
         </div>
-
-        <section id="dashboard">
-            <span>
-                <h1>DASHBOARD</h1>
+        <div class="card shadow bg-light cs-12 rs-7">
+            <span class="card-header d-flex justify-content-between">
+                <h4>Dashboard</h4>
+                <button class="btn btn-primary text-light font-weight-bold" id="refresh">
+                    <i class="fa-solid fa-rotate-right" id="refresh-icon"></i>
+                    <span class="ml-2" id="refresh-text">Refresh</span>
+                </button>
             </span>
-            <div class="card bg-white shadow overflow-auto">
-                <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, incidunt quisquam
-                    voluptatum quod itaque ab animi facere placeat. Voluptate quibusdam harum tempora numquam modi qui
-                    quos, repudiandae aperiam voluptatibus debitis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tempore, autem necessitatibus dolorem
-                    esse dolores quisquam non commodi quod tenetur saepe, perspiciatis nihil magnam! Nostrum id quae
-                    natus ea aspernatur.</p>
+            <div class="card-body" id="registration">
             </div>
-        </section>
+        </div>
     </main>
 </body>
 

@@ -63,6 +63,9 @@ menu.addEventListener("click", (event) => {
     pushbar.open('topnav2');	
 });
 
+screen.addEventListener("orientationchange", function() {
+    window.location.reload();
+  });
 
 
 	

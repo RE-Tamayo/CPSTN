@@ -4,6 +4,9 @@
         header('Location: /admin?login=Session expired.');
         exit();
     }
+    if(isset($_SESSION['admin_username'])) {
+        $username = ucfirst($_SESSION['admin_username']);
+   }
 
 ?>
 
@@ -34,10 +37,10 @@
                     <div class="input-group-prepend" id="dropdown-logo">
                         <span class="input-group-text  bg-primary text-light" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
                     </div>
-                    <select class="form-select">
-                        <option selected><?php if(isset($_SESSION['admin_username'])) { echo $_SESSION['admin_username']; } ?></option>
-                        <option>Settings</option>
-                        <option>Log-out</option>
+                    <select class="form-select" onChange="window.location.href=this.value">
+                        <option selected><?php echo $username; ?></option>
+                        <option value="/admin/settings">Settings</a></option>
+                        <option value="/admin/logout">Log-out</option>
                     </select>
                 </div>
             </div>
