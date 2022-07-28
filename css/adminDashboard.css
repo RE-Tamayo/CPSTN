@@ -37,6 +37,39 @@ main {
     background-color: #f1e8e8;
 }
 
+#account-menu {
+    width: 10rem;
+}
+
+#account-menu select {
+    width: 70%;
+    border: none;
+    background-color: var(--off-white);
+}
+
+#dropdown-logo {
+    height: 100%;
+}
+
+#logo {
+    width: 3rem;
+}
+
+#dash-header {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+#account-menu select:focus,
+#account-menu select:focus {
+    outline: none;
+    border: none;
+
+}
+
+#account-menu select option {
+    text-align: center;
+}
+
 .cs-1 {
     grid-column: span 1;
 }

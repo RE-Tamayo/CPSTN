@@ -21,7 +21,7 @@
 <body>
     <div class="container-center">
         <div class="form-container">
-            <img src="../assets/img/neust-logo.png" alt="neust-logo" class="center-x gap-tb">
+            <img src="../../assets/img/neust-logo.png" alt="neust-logo" class="center-x gap-tb">
             <h4 class="center-x gap-tb">NEUST CLINIC</h4>
             <h4 class="center-x gap-tb">(ADMIN)</h4>
             <span class="center-x gap-tb error"><?php if(isset($_GET['login'])) { echo $validError; } ?></span>
