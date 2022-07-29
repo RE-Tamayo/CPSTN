@@ -17,4 +17,12 @@ class AdminApproveContr extends AdminModel {
         return $data;
     }
 
+    public function approve($id) {
+        $this->approveRegistration($id);
+    }
+
+    public function delete($id) {
+        $this->deleteRegistration($id);
+    }
+
 }

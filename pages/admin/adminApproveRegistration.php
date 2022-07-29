@@ -48,7 +48,7 @@
 
         <div class="card shadow bg-light cs-12 rs-7">
             <span class="card-header d-flex justify-content-between">
-                <h4>Registration</h4>
+                <h4>Account Registrations</h4>
                 <button class="btn btn-primary text-light font-weight-bold" id="refresh">
                     <i class="fa-solid fa-rotate-right" id="refresh-icon"></i>
                     <span class="ml-2" id="refresh-text">Refresh</span>

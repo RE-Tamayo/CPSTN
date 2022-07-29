@@ -4,7 +4,7 @@ class UserModel extends Database {
     
     //REGISTER USER
     function userRegister($username, $password, $fName, $mName, $lName, $gender, $dob, $age) {
-        $stmt =  $this->connect()->prepare("INSERT INTO registration (uname, pwd, fname, mName, lName, gender, dob, age)
+        $stmt =  $this->connect()->prepare("INSERT INTO registration (uname, pwd, fName, mName, lName, gender, dob, age)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?); ");
 
         //Validate if query success

@@ -29,8 +29,8 @@
                 <td class="text-center"><?php echo $item["gender"]; ?></td>
                 <td class="text-center">    
                     <?php echo '<a class="btn btn-primary" href="/admin/review?id='.$item['id'].'"><i class="fa-solid fa-eye"></i></a>'; ?>
-                    <?php echo '<a class="btn btn-success" href="edit.php?id='.$item['id'].'"><i class="fa-solid fa-thumbs-up"></i></a>'; ?>
-                    <?php echo '<a class="btn btn-danger" href="delete.php?id='.$item['id'].'"><i class="fa-solid fa-trash"></i></a>'; ?>
+                    <?php echo '<a class="btn btn-success" href="/admin/approve-reg?id='.$item['id'].'"><i class="fa-solid fa-thumbs-up"></i></a>'; ?>
+                    <?php echo '<a class="btn btn-danger" href="/admin/delete-reg?id='.$item['id'].'"><i class="fa-solid fa-trash"></i></a>'; ?>
                 </td>
             </tr>
         <?php } ?>
@@ -39,18 +39,18 @@
 
 <script>
     $(document).ready(function() {
-        $('#regTable').DataTable(
-      { 
-        bLengthChange: false,
-        responsive: true,
-        scrollY: '200px',
-        scrollCollapse: true,
-        paging: false,
-        language: {
-          searchPlaceholder: "Search",
-          search: "",
-        }
-      })
+
+        $('#regTable').DataTable({ 
+            bLengthChange: false,
+            responsive: true,
+            scrollY: '300px',
+            scrollCollapse: true,
+            paging: false,
+            language: {
+            searchPlaceholder: "Search",
+            search: ""
+            }
+        })
     
     });
 </script>

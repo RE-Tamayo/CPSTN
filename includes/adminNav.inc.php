@@ -10,7 +10,7 @@
         </li>
         <li>
             <a href="/admin/approve">
-                <span>Approve Registrations</span>
+                <span>Account Registrations</span>
             </a>
         </li>
         <li>
@@ -58,7 +58,7 @@
         <li class="nav-item">
             <a href="/admin/approve" class="nav-link" id="approve">
                 <i class="fa-solid fa-user-check"></i>
-                <span class="link-text">Approve Registration</span>
+                <span class="link-text">Account Registrations</span>
             </a>
         </li>
         <li class="nav-item">
