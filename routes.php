@@ -13,6 +13,8 @@ get('/admin/approve', 'pages/admin/adminApproveRegistration.php');
 
 get('/admin/approve-table', 'includes/registrationTable.inc.php');
 
+get('/admin/review', 'pages/admin/adminViewRegistration.php');
+
 get('/admin/analytics', 'pages/admin/adminAnalytics.php');
 
 get('/admin/users', 'pages/admin/adminManageUsers.php');

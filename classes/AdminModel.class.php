@@ -65,7 +65,7 @@ class AdminModel extends Database {
         //SET QUERY AND PREPARE STATEMENT
         $stmt = $this->connect()->prepare('SELECT * FROM registration WHERE id = ? LIMIT 1;');
         //VALIDATE AND EXECUTE QUERY
-        if(!$stmt->execute()) {
+        if(!$stmt->execute(array($id))) {
             $stmt = null;
             header('Location: /admin?status=There was an error while retrieving registration.');
             exit();
@@ -77,7 +77,7 @@ class AdminModel extends Database {
             exit();
         }
         //ASSIGN RESULT TO DATA
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt = null;
         
         //RETURN DATA

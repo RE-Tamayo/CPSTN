@@ -28,7 +28,7 @@
                 <td class="text-center"><?php echo $item["age"]; ?></td>
                 <td class="text-center"><?php echo $item["gender"]; ?></td>
                 <td class="text-center">    
-                    <?php echo '<a class="btn btn-primary" href="view.php?id='.$item['id'].'"><i class="fa-solid fa-eye"></i></a>'; ?>
+                    <?php echo '<a class="btn btn-primary" href="/admin/review?id='.$item['id'].'"><i class="fa-solid fa-eye"></i></a>'; ?>
                     <?php echo '<a class="btn btn-success" href="edit.php?id='.$item['id'].'"><i class="fa-solid fa-thumbs-up"></i></a>'; ?>
                     <?php echo '<a class="btn btn-danger" href="delete.php?id='.$item['id'].'"><i class="fa-solid fa-trash"></i></a>'; ?>
                 </td>
