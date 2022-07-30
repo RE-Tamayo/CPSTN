@@ -13,6 +13,7 @@
     <h1 class="text-lg">USER REGISTER</h1>
     <a href="/">ALREADY HAVE AN ACCOUNT?</a>
     <form action="/register" method="POST" enctype="multipart/form-data">
+        <input type="email" name="email" placeholder="Email">    
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="text" name="fName" placeholder="First Name">

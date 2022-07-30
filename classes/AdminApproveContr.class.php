@@ -18,11 +18,18 @@ class AdminApproveContr extends AdminModel {
     }
 
     public function approve($id) {
+        $data = $this->getReg($id);
+        $email = $data['email'];
+        $fName = $data['fName'];
+        $lName = $data['lName'];
+        $username = $data['uname'];
+        $sendMail = new SendMail();
+        $sendMail->sendApprovalEmail($email, $fName, $lName, $username);
         $this->approveRegistration($id);
     }
 
     public function delete($id) {
-        $this->deleteRegistration($id);
+        $this->delete($id);
     }
 
 }

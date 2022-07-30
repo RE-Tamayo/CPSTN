@@ -3,6 +3,7 @@
 
 class UserRegisterContr extends UserModel {
 
+    private $email;
     private $username;
     private $password;
     private $fName;
@@ -12,7 +13,8 @@ class UserRegisterContr extends UserModel {
     private $dob;
     private $age;
 
-    public function __construct($username, $password, $fName, $mName, $lName, $gender, $dob) {
+    public function __construct($email, $username, $password, $fName, $mName, $lName, $gender, $dob) {
+        $this->email = $email;
         $this->username = $username;
         $this->password = $password;
         $this->fName = $fName;
@@ -37,7 +39,7 @@ class UserRegisterContr extends UserModel {
         //Calculate Age
         $this->age = $this->calculateAge($this->dob);
 
-        $this->userRegister($this->username, $this->password, $this->fName, $this->mName, $this->lName, $this->gender, $this->dob, $this->age);
+        $this->userRegister($this->email, $this->username, $this->password, $this->fName, $this->mName, $this->lName, $this->gender, $this->dob, $this->age);
 
     }
  

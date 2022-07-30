@@ -3,12 +3,12 @@
 class UserModel extends Database {
     
     //REGISTER USER
-    function userRegister($username, $password, $fName, $mName, $lName, $gender, $dob, $age) {
-        $stmt =  $this->connect()->prepare("INSERT INTO registration (uname, pwd, fName, mName, lName, gender, dob, age)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?); ");
+    function userRegister($email, $username, $password, $fName, $mName, $lName, $gender, $dob, $age) {
+        $stmt =  $this->connect()->prepare("INSERT INTO registration (email, uname, pwd, fName, mName, lName, gender, dob, age)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?); ");
 
         //Validate if query success
-        if(!$stmt->execute(array($username, $password, $fName, $mName, $lName, $gender, $dob, $age))) {
+        if(!$stmt->execute(array($email, $username, $password, $fName, $mName, $lName, $gender, $dob, $age))) {
             $stmt = null;
             header('Location: /Register?login=There was an error during registration.');
             exit();

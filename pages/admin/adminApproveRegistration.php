@@ -6,7 +6,11 @@
     }
     if(isset($_SESSION['admin_username'])) {
         $username = ucfirst($_SESSION['admin_username']);
-   }
+    }
+
+    require_once($_SERVER['DOCUMENT_ROOT'].'/autoloader.php');
+    $registration = new AdminApproveContr();
+    $data = $registration->getAllReg();
 
 ?>
 
@@ -55,6 +59,32 @@
                 </button>
             </span>
             <div class="card-body" id="registration">
+                <table class="table" id="regTable">
+                    <thead class="text-light bg-primary">
+                        <tr>
+                            <th class="text-center">Username</th>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Age</th>
+                            <th class="text-center">Gender</th>
+                            <th class="text-center">Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($data as $item) { ?>
+                            <tr>
+                                <td class="text-center"><?php echo $item["uname"]; ?></td>
+                                <td class="text-center"><?php echo $item["fName"] . " " . $item["lName"]; ?></td>
+                                <td class="text-center"><?php echo $item["age"]; ?></td>
+                                <td class="text-center"><?php echo $item["gender"]; ?></td>
+                                <td class="text-center">    
+                                    <?php echo '<a class="btn btn-primary" href="/admin/review?id='.$item['id'].'"><i class="fa-solid fa-eye"></i></a>'; ?>
+                                    <?php echo '<a class="btn btn-success" id="approve" href="/admin/approve-reg?id='.$item['id'].'"><i class="fa-solid fa-thumbs-up"></i></a>'; ?>
+                                    <?php echo '<a class="btn btn-danger" id="disapprove" href="/admin/delete-reg?id='.$item['id'].'"><i class="fa-solid fa-trash"></i></a>'; ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>

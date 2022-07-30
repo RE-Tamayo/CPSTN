@@ -1,3 +1,22 @@
+let logout = document.querySelector('#logout');
+
+logout.addEventListener("click", (event) => {
+    event.preventDefault();
+    Swal.fire({
+        title: 'Logout',
+        text: "Are you sure you want to logout?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d9534f',
+        cancelButtonColor: '#0275d8',
+        confirmButtonText: 'Logout'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "/admin/logout";
+        }
+      })
+});
+
 const navItem1 = document.querySelector('#dashboard');
 const navItem2 = document.querySelector('#approve');
 const navItem3 = document.querySelector('#analytics');

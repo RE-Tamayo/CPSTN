@@ -9,7 +9,7 @@ if(!isset($_SESSION))session_start();
             require_once($_SERVER['DOCUMENT_ROOT'].'/autoloader.php');
             $id = $_GET['id'];
             $approve = new AdminApproveContr();
-            $approve->approveRegistration($id);
+            $approve->approve($id);
         
             header('Location: /admin/approve');
             exit();
