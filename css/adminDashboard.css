@@ -150,18 +150,31 @@ main {
     grid-row: span 8;
 }
 
-
 ::-webkit-scrollbar {
     width: .3rem;
-  }
-  
- 
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
+}
 
-  ::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
     background: var(--primary);
-  }
+}
+
+@media only screen and (max-width: 315px) {
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+       
+    }
+}
+
+@media only screen and (min-width: 315px) and (max-width: 550px) {}
+
+@media only screen and (min-width:550px) and (max-width: 800px) {}
+
+@media only screen and (min-width: 800px) {}
 

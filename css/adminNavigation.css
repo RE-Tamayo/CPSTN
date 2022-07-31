@@ -154,7 +154,6 @@ text-align: left;
         flex-direction: row;
         height: 5rem;
         width: 100vw;
-        overflow-x: scroll;
     }
 
     .nav-link {
@@ -200,7 +199,6 @@ text-align: left;
         flex-direction: row;
         height: 5rem;
         width: 100vw;
-        overflow-x: scroll;
     }
 
     .nav-link {
@@ -245,7 +243,6 @@ text-align: left;
         flex-direction: row;
         height: 5rem;
         width: 100vw;
-        overflow-x: scroll;
     }
 
     .nav-link {

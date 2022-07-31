@@ -1,16 +1,16 @@
 $(document).ready(function() {
-
+    
     $('#regTable').DataTable({ 
         bLengthChange: false,
         responsive: true,
-        scrollY: '300px',
+        scrollY: 300,
         scrollCollapse: true,
         paging: false,
         language: {
         searchPlaceholder: "Search",
         search: ""
         }
-    })
+    });
 
 });
 
@@ -26,4 +26,6 @@ $(document).ready( function () {
     });
     
 } );
+
+
   
